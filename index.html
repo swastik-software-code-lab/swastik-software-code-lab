@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Swastik Software Code Lab - SSCL</title>
+  <meta name="description" content="Swastik Software Code Lab (SSCL) builds secure, attractive & SEO-ready websites. Free SSL, Free QR Code and 1 month free support included." />
+  <!-- Open Graph (edit OG image after you add hero image) -->
+  <meta property="og:title" content="Swastik Software Code Lab - SSCL">
+  <meta property="og:description" content="Secure, modern websites with free SSL and QR codes. 1 month free support.">
+  <meta property="og:image" content="/assets/img/og-banner.jpg"> <!-- EDIT: Replace with your OG image path (1200x630) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://swastik-software-code-lab.github.io/swastik-software-code-lab/"> <!-- EDIT: replace when live -->
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Swastik Software Code Lab - SSCL">
+  <meta name="twitter:description" content="Secure, modern websites with free SSL and QR codes. 1 month free support.">
+  <meta name="twitter:image" content="/assets/img/og-banner.jpg">
+
+  <!-- Favicon & icons (place files in /assets/img/) -->
+  <link rel="icon" href="/assets/img/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png"> <!-- EDIT: generate 180x180 -->
+  <meta name="theme-color" content="#0F172A">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD Organization (sameAs filled with placeholders — EDIT with real URLs) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Swastik Software Code Lab",
+    "alternateName": "SSCL",
+    "url": "https://<YOUR-LIVE-URL>/",
+    "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQEg9MUQSu_CcA/company-logo_200_200/B4EZjHN6fdGwAM-/0/1755688973308?e=1759968000&v=beta&t=qqVYRaCieKTEAVE6nntNePgFm65D3eT5pHTZEQ1q71c",
+    "sameAs": [
+      "https://www.linkedin.com/company/<your-linkedin>", 
+      "https://www.facebook.com/<your-fb>",
+      "https://twitter.com/<your-twitter>"
+    ],
+    "contactPoint": [{
+      "@type":"ContactPoint",
+      "telephone":"+91-XXXXXXXXXX",
+      "contactType":"sales",
+      "areaServed":"IN",
+      "availableLanguage":["en","hi"]
+    }]
+  }
+  </script>
+
+  <style>
+  /* ---------- Basic reset & variables ---------- */
+  :root{
+    --bg:#07102a; --hero-gradient-start:#012244; --hero-gradient-end:#08253a;
+    --accent:#FFC857; --muted:#94a3b8; --card:#ffffff; --text-dark:#061026;
+    --max-width:1100px;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;color:#0b1220;background:#f8fafc;line-height:1.5}
+  a{color:inherit}
+  .container{max-width:var(--max-width);margin:0 auto;padding:20px}
+
+  /* ---------- Header ---------- */
+  header.site-header{background:#fff;box-shadow:0 2px 12px rgba(3,10,25,0.06);position:sticky;top:0;z-index:50}
+  .site-header .container{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text-dark);padding:10px 0}
+  .brand img{width:48px;height:48px;border-radius:8px;object-fit:cover}
+  .brand .title{font-weight:700;font-size:16px}
+  nav.top-nav{display:flex;align-items:center;gap:12px}
+  .btn-quote{background:var(--accent);color:#061026;padding:10px 14px;border-radius:10px;font-weight:600;text-decoration:none}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;overflow:hidden;border-bottom-left-radius:18px;border-bottom-right-radius:18px;margin-bottom:18px}
+  .hero .visual{min-height:420px;background:
+    linear-gradient(180deg, rgba(1,34,68,0.5), rgba(8,37,58,0.5)),
+    url('/assets/img/hero-lqip.jpg');
+    background-size:cover;background-position:center;display:flex;align-items:center}
+  /* NOTE: replace hero-lqip.jpg with tiny blurred LQIP; real image will lazy-load via JS */
+  .hero .glass{padding:48px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));backdrop-filter: blur(6px);max-width:780px;margin-left:40px}
+  .hero h1{color:#fff;font-size:clamp(26px,5vw,40px);margin:0 0 12px;font-weight:700}
+  .hero p{color:rgba(255,255,255,0.9);margin:0 0 18px}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+  .btn-primary{background:var(--accent);padding:12px 18px;border-radius:10px;font-weight:700;color:#061026;text-decoration:none}
+  .btn-secondary{background:transparent;border:1px solid rgba(255,255,255,0.16);padding:12px 18px;border-radius:10px;color:#fff;text-decoration:none}
+
+  /* Offers strip */
+  .offers{display:flex;gap:12px;margin:18px auto;padding:12px 20px;background:#fff;border-radius:12px;align-items:center;box-shadow:0 8px 24px rgba(2,6,23,0.06);max-width:var(--max-width)}
+  .offer{display:flex;gap:10px;align-items:center;font-weight:600;color:var(--text-dark)}
+
+  /* Services cards */
+  .services{display:flex;gap:14px;flex-wrap:wrap;margin:22px 0}
+  .card{background:#fff;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.06);flex:1;min-width:240px}
+  .card h3{margin:0 0 8px;font-size:18px}
+  .card p{margin:0;color:var(--muted)}
+
+  /* FAQ */
+  .faq{margin:28px 0}
+  .faq details{background:#fff;padding:12px;border-radius:10px;margin-bottom:10px}
+  .faq summary{font-weight:700;cursor:pointer;outline:none}
+
+  /* Contact */
+  .contact{display:grid;grid-template-columns:1fr 320px;gap:18px;margin:28px 0}
+  .contact form{background:#fff;padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+  .contact input,.contact textarea{width:100%;padding:10px;border:1px solid #e6e9ee;border-radius:8px;margin-bottom:10px;font-size:15px}
+
+  /* Footer */
+  footer.site-footer{padding:20px;text-align:center;color:#6b7280;font-size:14px;margin-top:30px}
+
+  /* Responsive */
+  @media(max-width:900px){
+    .hero .glass{margin-left:18px;padding:28px}
+    .contact{grid-template-columns:1fr}
+    .offers{flex-direction:column;align-items:flex-start}
+  }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="/" class="brand" aria-label="Swastik Software Code Lab">
+        <img src="https://media.licdn.com/dms/image/v2/D4E0BAQEg9MUQSu_CcA/company-logo_200_200/B4EZjHN6fdGwAM-/0/1755688973308?e=1759968000&v=beta&t=qqVYRaCieKTEAVE6nntNePgFm65D3eT5pHTZEQ1q71c" alt="Swastik Software Code Lab - SSCL logo">
+        <div>
+          <div class="title">Swastik Software Code Lab</div>
+          <div style="font-size:12px;color:#64748b">- SSCL</div>
+        </div>
+      </a>
+
+      <nav class="top-nav" role="navigation" aria-label="Main">
+        <a class="btn-quote" href="/contact.html">Get Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero">
+    <div class="visual" id="heroVisual">
+      <div class="container">
+        <div class="glass" role="region" aria-label="Hero content">
+          <h1>Swastik Software Code Lab - SSCL</h1>
+          <p>Secure, modern & conversion-focused websites. Free SSL, a free QR code and 1 month free support with every site.</p>
+          <div class="cta-row">
+            <a class="btn-primary" href="/contact.html">Get Quote</a>
+            <a class="btn-secondary" href="/services.html">View Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offers strip -->
+  <div class="offers container" role="region" aria-label="Offers">
+    <div class="offer">✅ Free SSL (HTTPS)</div>
+    <div class="offer">✅ Free QR code for your website</div>
+    <div class="offer">✅ 1 month free support</div>
+  </div>
+
+  <!-- Services -->
+  <main class="container" role="main">
+    <section class="services" aria-label="Services overview">
+      <article class="card">
+        <h3>Website Development</h3>
+        <p><strong>Summary:</strong> Fast, responsive websites built to convert.</p>
+        <p><strong>Details:</strong> Custom UI, responsive layouts, lightweight animations, accessibility best-practices, and basic on-page SEO (meta, alt text, schema).</p>
+      </article>
+
+      <article class="card">
+        <h3>Free SSL</h3>
+        <p><strong>Summary:</strong> HTTPS included with every site.</p>
+        <p><strong>Details:</strong> We set up SSL certificates and verify secure delivery so visitors see the padlock and your site gains SEO trust.</p>
+      </article>
+
+      <article class="card">
+        <h3>Free QR Code</h3>
+        <p><strong>Summary:</strong> Branded QR that opens your website directly.</p>
+        <p><strong>Details:</strong> You get print & web-ready assets and recommendations for where to place the QR (business cards, product packaging, storefront posters).</p>
+      </article>
+    </section>
+
+    <!-- FAQ (short) -->
+    <section class="faq" aria-label="FAQ">
+      <h2>Frequently Asked Questions</h2>
+
+      <details>
+        <summary>1. How will you optimize my site for search engines?</summary>
+        <p>We implement basic on-page SEO: keyword-aligned titles/meta descriptions, schema markup, optimized images, fast-loading pages and a sitemap for search engine indexing.</p>
+      </details>
+
+      <details>
+        <summary>2. How do we start — design & development timelines?</summary>
+        <p>We run design previews and development in parallel where possible. After scope confirmation we show design mockups; while you approve, we set up the project skeleton and begin development to shorten delivery time.</p>
+      </details>
+
+      <details>
+        <summary>3. Do you work with startups and small budgets?</summary>
+        <p>Yes — we have starter packages and can scale features as your business grows.</p>
+      </details>
+
+      <details>
+        <summary>4. Will my website be mobile responsive?</summary>
+        <p>Yes. We build mobile-first and ensure layouts adapt smoothly across devices.</p>
+      </details>
+
+      <details>
+        <summary>5. Do you provide content writing?</summary>
+        <p>We provide microcopy guidance and page structure; full content writing is available as an add-on.</p>
+      </details>
+
+      <details>
+        <summary>6. How fast will the website load?</summary>
+        <p>We optimize for speed (WebP images, lazy-loading, critical CSS). Performance targets are agreed during kickoff.</p>
+      </details>
+
+      <details>
+        <summary>7. How is the QR code used?</summary>
+        <p>The QR opens your website directly — ideal for business cards, packaging, leaflets and storefront signage to drive immediate traffic.</p>
+      </details>
+
+      <details>
+        <summary>8. What happens after the free month of support?</summary>
+        <p>You can choose an affordable maintenance plan for ongoing updates and security monitoring.</p>
+      </details>
+
+      <details>
+        <summary>9. Can you redesign an existing website?</summary>
+        <p>Yes. We modernize visuals, improve speed and fix SEO issues as part of redesign projects.</p>
+      </details>
+
+      <details>
+        <summary>10. Typical project duration?</summary>
+        <p>Usually 7–15 working days depending on scope and assets provided.</p>
+      </details>
+    </section>
+
+    <!-- Contact (small form) -->
+    <section class="contact" aria-label="Contact">
+      <div>
+        <h2>Contact Us</h2>
+        <p>Ready to start? Share your requirements and we'll reply within 5–7 working hours/days.</p>
+
+        <form id="contactForm" action="https://formspree.io/f/<YOUR-FORM-ID>" method="POST">
+          <!-- EDIT: Replace action with your Formspree or other endpoint -->
+          <label>
+            <input type="text" name="name" placeholder="Your name" required>
+          </label>
+          <label>
+            <input type="email" name="email" placeholder="Email address" required>
+          </label>
+          <label>
+            <input type="tel" name="phone" placeholder="Phone (optional)">
+          </label>
+          <label>
+            <textarea name="message" placeholder="Tell us about your project" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="btn-primary">Send request</button>
+        </form>
+      </div>
+
+      <aside>
+        <div style="background:#fff;padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.06)">
+          <h3>Contact details</h3>
+          <p>Email: <a href="mailto:swastik@example.com">swastik@example.com</a> <!-- EDIT: replace --></p>
+          <p>Phone: +91-XXXXXXXXXX <!-- EDIT: replace --></p>
+          <h4>Support policy</h4>
+          <p>1 month free support after delivery. Response time: 5–7 working hours/days.</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>Copyright © 2025 Swastik Software Code Lab - SSCL. All rights reserved.</p>
+      <p><small>Part of Swastik Empire</small></p>
+    </div>
+  </footer>
+
+  <!-- Minimal JS: lazy-load hero image & simple form UX -->
+  <script>
+  // Lazy-load hero high-res image (swap LQIP -> real image)
+  (function(){
+    var hero = document.getElementById('heroVisual');
+    if(!hero) return;
+    var img = new Image();
+    img.src = '/assets/img/hero-large.webp'; // EDIT: add your final hero image path
+    img.onload = function(){
+      hero.style.backgroundImage = "linear-gradient(180deg, rgba(1,34,68,0.5), rgba(8,37,58,0.5)), url('/assets/img/hero-large.webp')";
+      hero.style.backgroundSize = 'cover';
+      hero.style.backgroundPosition = 'center';
+    };
+  })();
+
+  // Simple form success UX
+  (function(){
+    var form = document.getElementById('contactForm');
+    if(!form) return;
+    form.addEventListener('submit', function(){
+      // optionally show a spinner or disable button
+      // leave as-is; Formspree will handle redirect or success
+    });
+  })();
+  </script>
+</body>
+</html>
