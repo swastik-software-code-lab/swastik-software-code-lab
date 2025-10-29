@@ -3,31 +3,35 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Swastik Software Code Lab - SSCL</title>
-  <meta name="description" content="Swastik Software Code Lab (SSCL) builds secure, attractive & SEO-ready websites. Free SSL, Free QR Code and 2 month free support included." />
-  <!-- Open Graph (edit OG image after you add hero image) -->
-  <meta property="og:title" content="Swastik Software Code Lab - SSCL">
-  <meta property="og:description" content="Secure, modern websites with free SSL and QR codes. 2 month free support.">
-  <meta property="og:image" content="/assets/img/og-banner.jpg"> <!-- EDIT: Replace with your OG image path (1200x630) -->
+  <title>Swastik Software Code Lab (SSCL) — Secure, fast, SEO-ready websites</title>
+  <meta name="description" content="SSCL builds modern, secure, and conversion-focused websites with free SSL, branded QR code, and 2 months of support. Fast delivery, mobile-first, and advanced on-page SEO." />
+  <meta name="keywords" content="website development Indore, secure websites, SEO-ready websites, SSCL, Swastik Software Code Lab, web design, free SSL, QR code" />
+  <link rel="canonical" href="https://swastik-software-code-lab.github.io/swastik-software-code-lab/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Swastik Software Code Lab — Secure, fast, SEO-ready websites">
+  <meta property="og:description" content="Free SSL, branded QR, and 2 months support. Mobile-first, conversion-focused, and advanced on-page SEO.">
+  <meta property="og:image" content="/assets/img/og-banner.jpg">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://swastik-software-code-lab.github.io/swastik-software-code-lab/"> <!-- EDIT: replace when live -->
+  <meta property="og:url" content="https://swastik-software-code-lab.github.io/swastik-software-code-lab/">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Swastik Software Code Lab - SSCL">
-  <meta name="twitter:description" content="Secure, modern websites with free SSL and QR codes. 2 month free support.">
+  <meta name="twitter:title" content="Swastik Software Code Lab — Secure, fast, SEO-ready websites">
+  <meta name="twitter:description" content="Free SSL, branded QR, and 2 months support. Mobile-first, conversion-focused, and advanced on-page SEO.">
   <meta name="twitter:image" content="/assets/img/og-banner.jpg">
 
-  <!-- Favicon & icons (place files in /assets/img/) -->
-  <link rel="icon" href="Swastik Software Code Lab logo.jpg" sizes="32x32">
-  <link rel="apple-touch-icon" href="Swastik Software Code Lab logo.jpg"> <!-- EDIT: generate 180x180 -->
-  <meta name="theme-color" content="#0F172A">
+  <!-- Favicon & icons -->
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon-180.png">
+  <meta name="theme-color" content="#000000">
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- JSON-LD Organization (sameAs filled with placeholders — EDIT with real URLs) -->
+  <!-- Structured data: Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -35,11 +39,11 @@
     "name": "Swastik Software Code Lab",
     "alternateName": "SSCL",
     "url": "https://swastik-software-code-lab.github.io/swastik-software-code-lab/",
-    "logo": "Swastik Software Code Lab logo.jpg",
+    "logo": "https://swastik-software-code-lab.github.io/swastik-software-code-lab/Swastik%20Software%20Code%20Lab%20logo.jpg",
     "sameAs": [
-      "https://www.linkedin.com/company/swastik-software-code-lab", 
-      "https://www.facebook.com/<your-fb>",
-      "https://twitter.com/<your-twitter>"
+      "https://www.linkedin.com/company/swastik-software-code-lab",
+      "https://www.instagram.com/swastik.empire",
+      "https://wa.me/919424084564"
     ],
     "contactPoint": [{
       "@type":"ContactPoint",
@@ -51,74 +55,202 @@
   }
   </script>
 
+  <!-- Structured data: LocalBusiness (optional enhancement) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Swastik Software Code Lab",
+    "image": "https://swastik-software-code-lab.github.io/swastik-software-code-lab/Swastik%20Software%20Code%20Lab%20logo.jpg",
+    "@id": "https://swastik-software-code-lab.github.io/swastik-software-code-lab/",
+    "url": "https://swastik-software-code-lab.github.io/swastik-software-code-lab/",
+    "telephone": "+91-9424084564",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Indore",
+      "addressRegion": "Madhya Pradesh",
+      "postalCode": "452001",
+      "addressCountry": "IN"
+    },
+    "priceRange": "₹₹",
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "10:00",
+      "closes": "19:00"
+    }]
+  }
+  </script>
+
   <style>
-  /* ---------- Basic reset & variables ---------- */
+  /* ---------- Variables ---------- */
   :root{
-    --bg:#07102a; --hero-gradient-start:#012244; --hero-gradient-end:#08253a;
-    --accent:#FFC857; --muted:#94a3b8; --card:#ffffff; --text-dark:#061026;
+    --bg:#ffffff;
+    --text:#0b0b0b;
+    --muted:#6b7280;
+    --accent: rgb(243, 134, 3);
+    --card:#ffffff;
+    --border:#e6e9ee;
+    --shadow: 0 8px 28px rgba(2,6,23,0.08);
     --max-width:1100px;
   }
   *{box-sizing:border-box}
   html,body{height:100%}
-  body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;color:#0b1220;background:#f8fafc;line-height:1.5}
-  a{color:inherit}
+  body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;color:var(--text);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+
   .container{max-width:var(--max-width);margin:0 auto;padding:20px}
 
-  /* ---------- Header ---------- */
-  header.site-header{background:#fff;box-shadow:0 2px 12px rgba(3,10,25,0.06);position:sticky;top:0;z-index:50}
-  .site-header .container{display:flex;align-items:center;justify-content:space-between;gap:12px}
-  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text-dark);padding:10px 0}
-  .brand img{width:48px;height:48px;border-radius:8px;object-fit:cover}
-  .brand .title{font-weight:700;font-size:16px}
-  nav.top-nav{display:flex;align-items:center;gap:12px}
-  .btn-quote{background:var(--accent);color:#061026;padding:10px 14px;border-radius:10px;font-weight:600;text-decoration:none}
+  /* ---------- Loader (with logo) ---------- */
+  .loader{
+    position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#ffffff;z-index:9999;
+  }
+  .loader-inner{display:flex;flex-direction:column;align-items:center;gap:16px}
+  .loader-logo{
+    width:64px;height:64px;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.12);
+  }
+  .loader-spinner{
+    width:48px;height:48px;border:4px solid #eee;border-top-color:var(--accent);border-radius:50%;
+    animation:spin 1s linear infinite;
+  }
+  @keyframes spin{to{transform:rotate(360deg)}}
 
-  /* ---------- Hero ---------- */
-  .hero{position:relative;overflow:hidden;border-bottom-left-radius:18px;border-bottom-right-radius:18px;margin-bottom:18px}
-  .hero .visual{min-height:420px;background:
-    linear-gradient(180deg, rgba(1,34,68,0.5), rgba(8,37,58,0.5)),
-    url('/assets/img/hero-lqip.jpg');
-    background-size:cover;background-position:center;display:flex;align-items:center}
-  /* NOTE: replace hero-lqip.jpg with tiny blurred LQIP; real image will lazy-load via JS */
-  .hero .glass{padding:48px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));backdrop-filter: blur(6px);max-width:780px;margin-left:40px}
-  .hero h1{color:#fff;font-size:clamp(26px,5vw,40px);margin:0 0 12px;font-weight:700}
-  .hero p{color:rgba(255,255,255,0.9);margin:0 0 18px}
+  /* ---------- Header ---------- */
+  header.site-header{
+    background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50
+  }
+  .site-header .container{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);padding:10px 0}
+  .brand img{width:44px;height:44px;border-radius:8px;object-fit:cover}
+  .brand .title{font-weight:700;font-size:16px}
+  nav.top-nav{display:flex;align-items:center;gap:14px}
+
+  /* Social icons */
+  .social{display:flex;align-items:center;gap:10px}
+  .social a{
+    display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid var(--border);
+    border-radius:10px;background:#fff;box-shadow:0 2px 10px rgba(2,6,23,0.06);transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .social a:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(2,6,23,0.12)}
+
+  .btn-cta{background:var(--accent);color:#000;padding:10px 14px;border-radius:10px;font-weight:700}
+
+  /* ---------- Hero (3D animated) ---------- */
+  .hero{position:relative;overflow:hidden;margin-bottom:18px}
+  .hero .container{position:relative}
+  .hero-wrap{
+    position:relative;min-height:520px;display:grid;grid-template-columns:1.05fr .95fr;gap:20px;align-items:center;
+    perspective:1000px;
+  }
+  .hero-copy{
+    background:#fff;border:1px solid var(--border);border-radius:14px;padding:36px;box-shadow:var(--shadow);
+    transform-style:preserve-3d;transition:transform .12s ease;
+  }
+  .hero h1{font-size:clamp(28px,5vw,44px);margin:0 0 12px;font-weight:800;letter-spacing:-0.01em}
+  .hero p{margin:0 0 18px;color:#374151}
   .cta-row{display:flex;gap:12px;flex-wrap:wrap}
-  .btn-primary{background:var(--accent);padding:12px 18px;border-radius:10px;font-weight:700;color:#061026;text-decoration:none}
-  .btn-secondary{background:transparent;border:1px solid rgba(255,255,255,0.16);padding:12px 18px;border-radius:10px;color:#fff;text-decoration:none}
+  .btn-primary{background:var(--accent);padding:12px 18px;border-radius:10px;font-weight:700;color:#000}
+  .btn-secondary{background:#000;color:#fff;padding:12px 18px;border-radius:10px;font-weight:600;border:1px solid #000}
+
+  /* 3D visual card */
+  .hero-visual{
+    position:relative;border-radius:16px;background:#fff;border:1px solid var(--border);box-shadow:var(--shadow);
+    padding:24px;transform-style:preserve-3d;transition:transform .12s ease;
+  }
+  .visual-stack{
+    position:relative;height:360px;display:grid;place-items:center;
+  }
+  .visual-card{
+    position:absolute;width:70%;height:60%;border-radius:16px;background:linear-gradient(135deg,#fff,#f7f7f7);
+    border:1px solid var(--border);box-shadow:0 20px 60px rgba(0,0,0,0.08);
+    transform:translateZ(40px) rotateX(0deg) rotateY(0deg);
+  }
+  .visual-card:nth-child(2){transform:translateZ(20px) translateY(22px) translateX(-18px)}
+  .visual-card:nth-child(3){transform:translateZ(60px) translateY(-22px) translateX(18px)}
+  .accent-orb{
+    position:absolute;bottom:24px;right:24px;width:64px;height:64px;border-radius:50%;
+    background:radial-gradient(circle at 30% 30%, rgba(243,134,3,0.9), rgba(243,134,3,0.5), rgba(243,134,3,0.2));
+    box-shadow:0 12px 30px rgba(243,134,3,0.35);
+    animation:float 4s ease-in-out infinite;
+  }
+  @keyframes float{
+    0%,100%{transform:translateZ(80px) translateY(0)}
+    50%{transform:translateZ(80px) translateY(-10px)}
+  }
 
   /* Offers strip */
-  .offers{display:flex;gap:12px;margin:18px auto;padding:12px 20px;background:#fff;border-radius:12px;align-items:center;box-shadow:0 8px 24px rgba(2,6,23,0.06);max-width:var(--max-width)}
-  .offer{display:flex;gap:10px;align-items:center;font-weight:600;color:var(--text-dark)}
+  .offers{display:flex;gap:12px;margin:18px auto;padding:12px 20px;background:#fff;border-radius:12px;align-items:center;box-shadow:var(--shadow);max-width:var(--max-width)}
+  .offer{display:flex;gap:10px;align-items:center;font-weight:600;color:#111}
 
   /* Services cards */
   .services{display:flex;gap:14px;flex-wrap:wrap;margin:22px 0}
-  .card{background:#fff;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.06);flex:1;min-width:240px}
+  .card{background:#fff;padding:18px;border-radius:12px;box-shadow:var(--shadow);flex:1;min-width:240px;border:1px solid var(--border)}
   .card h3{margin:0 0 8px;font-size:18px}
-  .card p{margin:0;color:var(--muted)}
+  .card p{margin:0;color:#4b5563}
+
+  /* Benefits section */
+  .benefits{margin:28px 0}
+  .benefits .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+  .benefits .panel{
+    background:#fff;border:1px solid var(--border);border-radius:14px;padding:24px;box-shadow:var(--shadow)
+  }
+  .benefit-list{display:grid;grid-template-columns:repeat(2,minmax(220px,1fr));gap:14px}
+  .benefit-item{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px;box-shadow:0 4px 14px rgba(2,6,23,0.06)}
+  .benefit-item h4{margin:0 0 6px;font-size:16px}
+  .benefit-item p{margin:0;color:#6b7280}
 
   /* FAQ */
   .faq{margin:28px 0}
-  .faq details{background:#fff;padding:12px;border-radius:10px;margin-bottom:10px}
+  .faq h2{margin:0 0 12px}
+  .faq details{background:#fff;padding:12px;border-radius:10px;margin-bottom:10px;border:1px solid var(--border);box-shadow:0 2px 10px rgba(2,6,23,0.06)}
   .faq summary{font-weight:700;cursor:pointer;outline:none}
 
   /* Contact */
   .contact{display:grid;grid-template-columns:1fr 320px;gap:18px;margin:28px 0}
-  .contact form{background:#fff;padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
-  .contact input,.contact textarea{width:100%;padding:10px;border:1px solid #e6e9ee;border-radius:8px;margin-bottom:10px;font-size:15px}
+  .contact form{background:#fff;padding:16px;border-radius:12px;box-shadow:var(--shadow);border:1px solid var(--border)}
+  .contact input,.contact textarea{width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;margin-bottom:10px;font-size:15px}
+  .contact aside{background:#fff;padding:16px;border-radius:12px;box-shadow:var(--shadow);border:1px solid var(--border)}
 
   /* Footer */
-  footer.site-footer{padding:20px;text-align:center;color:#6b7280;font-size:14px;margin-top:30px}
+  footer.site-footer{padding:20px;text-align:center;color:#6b7280;font-size:14px;margin-top:30px;border-top:1px solid var(--border)}
+  .footer-social{display:flex;justify-content:center;gap:10px;margin-top:10px}
+
+  /* Fixed action buttons (Call + WhatsApp) */
+  .fab-wrap{position:fixed;bottom:18px;right:18px;display:flex;flex-direction:column;gap:10px;z-index:40}
+  .fab{
+    display:flex;align-items:center;gap:10px;background:#000;color:#fff;padding:12px 14px;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,0.2);
+    border:1px solid #000;transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .fab .dot{width:10px;height:10px;border-radius:50%;background:var(--accent)}
+  .fab:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(0,0,0,0.28)}
+  .fab.whatsapp{background:var(--accent);color:#000;border-color:var(--accent)}
+
+  /* Accessibility helpers */
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
 
   /* Responsive */
+  @media(max-width:1024px){
+    .hero-wrap{grid-template-columns:1fr}
+    .benefits .wrap{grid-template-columns:1fr}
+    .visual-stack{height:300px}
+  }
   @media(max-width:900px){
-    .hero .glass{margin-left:18px;padding:28px}
     .contact{grid-template-columns:1fr}
     .offers{flex-direction:column;align-items:flex-start}
   }
   </style>
 </head>
 <body>
+  <!-- Loader -->
+  <div class="loader" aria-label="Loading SSCL website">
+    <div class="loader-inner">
+      <img class="loader-logo" src="Swastik Software Code Lab logo.jpg" alt="SSCL logo">
+      <div class="loader-spinner" aria-hidden="true"></div>
+      <div class="sr-only">Loading...</div>
+    </div>
+  </div>
+
   <header class="site-header" role="banner">
     <div class="container">
       <a href="/" class="brand" aria-label="Swastik Software Code Lab">
@@ -130,41 +262,74 @@
       </a>
 
       <nav class="top-nav" role="navigation" aria-label="Main">
-        <a class="btn-quote" href="https://wa.me/+919424084564">Get Quote</a>
+        <div class="social" aria-label="Social links">
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/swastik.empire" aria-label="Instagram" rel="noopener" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#000" aria-hidden="true">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.75a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/company/swastik-software-code-lab" aria-label="LinkedIn" rel="noopener" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#000" aria-hidden="true">
+              <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05C20.42 10 23 12.15 23 16.2V23h-4v-6.17c0-1.48-.03-3.4-2.07-3.4-2.07 0-2.39 1.62-2.39 3.29V23h-4V8z"/>
+            </svg>
+          </a>
+          <!-- WhatsApp -->
+          <a href="https://wa.me/919424084564" aria-label="WhatsApp" rel="noopener" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#000" aria-hidden="true">
+              <path d="M12.04 2C6.58 2 2.2 6.38 2.2 11.84c0 2.1.63 4.06 1.7 5.68L2 22l4.64-1.53a10.6 10.6 0 0 0 5.4 1.49c5.46 0 9.84-4.38 9.84-9.84C21.88 6.38 17.5 2 12.04 2zm6.13 14.24c-.26.74-1.53 1.45-2.15 1.55-.57.1-1.28.14-2.07-.13-.48-.16-1.1-.35-1.9-.77-3.34-1.77-5.51-4.95-5.68-5.18-.18-.23-1.36-1.81-1.36-3.45 0-1.64.86-2.44 1.16-2.77.3-.33.64-.42.86-.42.21 0 .43 0 .62.01.2.01.47-.08.74.56.26.64.88 2.2.96 2.36.08.16.13.35.02.57-.12.26-.18.42-.36.65-.18.23-.38.51-.55.69-.18.18-.37.38-.16.75.21.37.94 1.54 2.02 2.49 1.39 1.2 2.56 1.57 2.93 1.74.37.16.59.14.81-.08.22-.22.93-1.08 1.18-1.46.25-.38.51-.31.86-.18.35.14 2.21 1.04 2.59 1.22.38.18.64.27.73.42.08.15.08.85-.18 1.59z"/>
+            </svg>
+          </a>
+          <!-- Email -->
+          <a href="mailto:contact.swastikempire@gmail.com" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#000" aria-hidden="true">
+              <path d="M2 6c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6zm2 0l8 5 8-5H4zm16 12V9l-8 5-8-5v9h16z"/>
+            </svg>
+          </a>
+        </div>
+        <a class="btn-cta" href="#contact">Get Started</a>
       </nav>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero" aria-label="Hero">
-    <div class="visual" id="heroVisual">
-      <div class="container">
-        <div class="glass" role="region" aria-label="Hero content">
-          <h1>Swastik Software Code Lab - SSCL</h1>
-          <p>Secure, modern & conversion-focused websites. Free SSL, a free QR code and 2 month free support with every site.</p>
+    <div class="container">
+      <div class="hero-wrap" id="heroWrap">
+        <div class="hero-copy" id="heroCopy" role="region" aria-label="Hero content">
+          <h1>Secure, fast & conversion-focused websites</h1>
+          <p>Free SSL, branded QR code, and 2 months support with every site. Mobile-first, modern UI, and advanced on-page SEO that helps your business get found.</p>
           <div class="cta-row">
-            <a class="btn-primary" href="https://wa.me/+919424084564">Get Quote</a>
+            <a class="btn-primary" href="#contact">Get Started</a>
             <a class="btn-secondary" href="#h3">View Services</a>
+          </div>
+          <div class="offers" role="region" aria-label="Offers">
+            <div class="offer">✅ Free SSL (HTTPS)</div>
+            <div class="offer">✅ Branded QR code</div>
+            <div class="offer">✅ 2 months free support</div>
+          </div>
+        </div>
+
+        <div class="hero-visual" id="heroVisual3D" aria-hidden="true">
+          <div class="visual-stack">
+            <div class="visual-card"></div>
+            <div class="visual-card"></div>
+            <div class="visual-card"></div>
+            <div class="accent-orb"></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Offers strip -->
-  <div class="offers container" role="region" aria-label="Offers">
-    <div class="offer">✅ Free SSL (HTTPS)</div>
-    <div class="offer">✅ Free QR code for your website</div>
-    <div class="offer">✅ 2 month free support</div>
-  </div>
-
   <!-- Services -->
   <main class="container" role="main" id="h3">
     <section class="services" aria-label="Services overview">
       <article class="card">
-        <h3 >Website Development</h3>
+        <h3>Website Development</h3>
         <p><strong>Summary:</strong> Fast, responsive websites built to convert.</p>
-        <p><strong>Details:</strong> Custom UI, responsive layouts, lightweight animations, accessibility best-practices, and basic on-page SEO (meta, alt text, schema).</p>
+        <p><strong>Details:</strong> Custom UI, responsive layouts, lightweight animations, accessibility best-practices, and advanced on-page SEO (meta, alt text, schema, sitemap, performance).</p>
       </article>
 
       <article class="card">
@@ -180,23 +345,60 @@
       </article>
     </section>
 
+    <!-- Benefits: Why get a website -->
+    <section class="benefits" aria-label="Benefits of having a website">
+      <div class="wrap">
+        <div class="panel">
+          <h2>Why your business needs a modern website</h2>
+          <p>Clear, tangible benefits that compound over time. Build trust, capture demand, and convert visitors into customers.</p>
+          <div class="benefit-list">
+            <div class="benefit-item">
+              <h4>Credibility & trust</h4>
+              <p>Professional design + HTTPS padlock signal reliability and security to new visitors.</p>
+            </div>
+            <div class="benefit-item">
+              <h4>Organic discovery</h4>
+              <p>Advanced on-page SEO, schema, and fast load times help you rank higher and get found.</p>
+            </div>
+            <div class="benefit-item">
+              <h4>More conversions</h4>
+              <p>Clear CTAs, persuasive copy, and mobile-first layouts turn traffic into leads.</p>
+            </div>
+            <div class="benefit-item">
+              <h4>Own your brand</h4>
+              <p>Control your narrative across channels; link your site everywhere to centralize trust.</p>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>What you get with SSCL</h3>
+          <ul>
+            <li><strong>Design:</strong> Minimal, premium, startup-friendly visuals</li>
+            <li><strong>SEO:</strong> Titles, meta, schema, sitemap, alt text, WebP, lazy-load</li>
+            <li><strong>Speed:</strong> Critical CSS, compression, caching strategy suggestions</li>
+            <li><strong>Support:</strong> 2 months included, simple maintenance plans after</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <!-- FAQ (short) -->
     <section class="faq" aria-label="FAQ">
       <h2>Frequently Asked Questions</h2>
 
       <details>
         <summary>1. How will you optimize my site for search engines?</summary>
-        <p>We implement basic on-page SEO: keyword-aligned titles/meta descriptions, schema markup, optimized images, fast-loading pages and a sitemap for search engine indexing.</p>
+        <p>We implement advanced on-page SEO: keyword-aligned titles/meta, schema markup, optimized images (WebP), fast-loading pages, sitemap and accessible content.</p>
       </details>
 
       <details>
         <summary>2. How do we start — design & development timelines?</summary>
-        <p>We run design previews and development in parallel where possible. After scope confirmation we show design mockups; while you approve, we set up the project skeleton and begin development to shorten delivery time.</p>
+        <p>After scope confirmation we share mockups; while you review, we set up the project skeleton and start development to shorten delivery time.</p>
       </details>
 
       <details>
         <summary>3. Do you work with startups and small budgets?</summary>
-        <p>Yes — we have starter packages and can scale features as your business grows.</p>
+        <p>Yes — starter packages are available and we can scale features as your business grows.</p>
       </details>
 
       <details>
@@ -211,22 +413,22 @@
 
       <details>
         <summary>6. How fast will the website load?</summary>
-        <p>We optimize for speed (WebP images, lazy-loading, critical CSS). Performance targets are agreed during kickoff.</p>
+        <p>We optimize for speed: WebP images, lazy-loading, critical CSS and performance budgets agreed during kickoff.</p>
       </details>
 
       <details>
         <summary>7. How is the QR code used?</summary>
-        <p>The QR opens your website directly — ideal for business cards, packaging, leaflets and storefront signage to drive immediate traffic.</p>
+        <p>The QR opens your website directly — ideal for cards, packaging, leaflets and storefront signage.</p>
       </details>
 
       <details>
-        <summary>8. What happens after the free month of support?</summary>
+        <summary>8. What happens after the free support?</summary>
         <p>You can choose an affordable maintenance plan for ongoing updates and security monitoring.</p>
       </details>
 
       <details>
         <summary>9. Can you redesign an existing website?</summary>
-        <p>Yes. We modernize visuals, improve speed and fix SEO issues as part of redesign projects.</p>
+        <p>Yes. We modernize visuals, improve speed and fix SEO issues as part of redesigns.</p>
       </details>
 
       <details>
@@ -236,36 +438,39 @@
     </section>
 
     <!-- Contact (small form) -->
-    <section class="contact" aria-label="Contact">
+    <section class="contact" aria-label="Contact" id="contact">
       <div>
         <h2>Contact Us</h2>
-        <p>Ready to start? Share your requirements and we'll reply within 5–7 working hours/days.</p>
+        <p>Ready to start? Share your requirements and we’ll reply within 5–7 working hours/days.</p>
 
         <form id="contactForm" action="https://formspree.io/f/xnnopozp" method="POST">
-          <!-- EDIT: Replace action with your Formspree or other endpoint -->
           <label>
-            <input type="text" name="name" placeholder="Your name" required>
+            <input type="text" name="name" placeholder="Your name" required aria-label="Your name">
           </label>
           <label>
-            <input type="email" name="email" placeholder="Email address" required>
+            <input type="email" name="email" placeholder="Email address" required aria-label="Email address">
           </label>
           <label>
-            <input type="tel" name="phone" placeholder="Phone (optional)">
+            <input type="tel" name="phone" placeholder="Phone (optional)" aria-label="Phone number">
           </label>
           <label>
-            <textarea name="message" placeholder="Tell us about your project" rows="4" required></textarea>
+            <textarea name="message" placeholder="Tell us about your project" rows="4" required aria-label="Project details"></textarea>
           </label>
           <button type="submit" class="btn-primary">Send request</button>
         </form>
       </div>
 
       <aside>
-        <div style="background:#fff;padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.06)">
-          <h3>Contact details</h3>
-          <p>Email: <a href="mailto:swastik@example.com">contact.swastikempire@gmail.com</a> <!-- EDIT: replace --></p>
-          <p>Phone: +91-9424084564 <!-- EDIT: replace --></p>
-          <h4>Support policy</h4>
-          <p>2 month free support after delivery. Response time: 5–7 working hours/days.</p>
+        <h3>Contact details</h3>
+        <p>Email: <a href="mailto:contact.swastikempire@gmail.com">contact.swastikempire@gmail.com</a></p>
+        <p>Phone: <a href="tel:+919424084564">+91-9424084564</a></p>
+        <h4>Support policy</h4>
+        <p>2 months free support after delivery. Response time: 5–7 working hours/days.</p>
+        <div class="footer-social" aria-label="Secondary social links">
+          <a href="https://www.instagram.com/swastik.empire" aria-label="Instagram" rel="noopener" target="_blank">Instagram</a>
+          <a href="https://www.linkedin.com/company/swastik-software-code-lab" aria-label="LinkedIn" rel="noopener" target="_blank">LinkedIn</a>
+          <a href="https://wa.me/919424084564" aria-label="WhatsApp" rel="noopener" target="_blank">WhatsApp</a>
+          <a href="mailto:contact.swastikempire@gmail.com" aria-label="Email">Email</a>
         </div>
       </aside>
     </section>
@@ -275,21 +480,74 @@
     <div class="container">
       <p>Copyright © 2025 Swastik Software Code Lab - SSCL. All rights reserved.</p>
       <p><small>Part of Swastik Empire</small></p>
+      <div class="footer-social" aria-label="Footer social">
+        <a href="https://www.instagram.com/swastik.empire" aria-label="Instagram" rel="noopener" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/company/swastik-software-code-lab" aria-label="LinkedIn" rel="noopener" target="_blank">LinkedIn</a>
+        <a href="https://wa.me/919424084564" aria-label="WhatsApp" rel="noopener" target="_blank">WhatsApp</a>
+        <a href="mailto:contact.swastikempire@gmail.com" aria-label="Email">Email</a>
+      </div>
     </div>
   </footer>
 
-  <!-- Minimal JS: lazy-load hero image & simple form UX -->
+  <!-- Fixed action buttons -->
+  <div class="fab-wrap" aria-label="Quick contact">
+    <a class="fab" href="tel:+919424084564" aria-label="Call SSCL">
+      <span class="dot" aria-hidden="true"></span>
+      <span>Call</span>
+    </a>
+    <a class="fab whatsapp" href="https://wa.me/919424084564" target="_blank" rel="noopener" aria-label="WhatsApp SSCL">
+      <span class="dot" aria-hidden="true"></span>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- JS: loader, 3D tilt, hero image lazy-load, simple form UX -->
   <script>
-  // Lazy-load hero high-res image (swap LQIP -> real image)
+  // Loader: hide after page ready
+  window.addEventListener('load', function(){
+    var loader = document.querySelector('.loader');
+    if(loader){
+      loader.style.opacity = '1';
+      setTimeout(function(){
+        loader.style.transition = 'opacity .4s ease';
+        loader.style.opacity = '0';
+        setTimeout(function(){ loader.style.display = 'none'; }, 400);
+      }, 300);
+    }
+  });
+
+  // 3D tilt effect on hero cards
   (function(){
-    var hero = document.getElementById('heroVisual');
-    if(!hero) return;
+    var wrap = document.getElementById('heroWrap');
+    var copy = document.getElementById('heroCopy');
+    var visual = document.getElementById('heroVisual3D');
+    if(!wrap || !copy || !visual) return;
+    function tilt(e){
+      var rect = wrap.getBoundingClientRect();
+      var x = e.clientX - rect.left;
+      var y = e.clientY - rect.top;
+      var rx = ((y / rect.height) - 0.5) * -6; // rotateX
+      var ry = ((x / rect.width) - 0.5) * 6;   // rotateY
+      copy.style.transform = 'rotateX(' + rx + 'deg) rotateY(' + ry + 'deg)';
+      visual.style.transform = 'rotateX(' + (rx*0.8) + 'deg) rotateY(' + (ry*0.8) + 'deg)';
+    }
+    function reset(){
+      copy.style.transform = 'rotateX(0deg) rotateY(0deg)';
+      visual.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    }
+    wrap.addEventListener('mousemove', tilt);
+    wrap.addEventListener('mouseleave', reset);
+  })();
+
+  // Lazy-load hero high-res image (keeps white theme, used within visual cards if needed)
+  (function(){
     var img = new Image();
     img.src = '/assets/img/hero-large.webp'; // EDIT: add your final hero image path
     img.onload = function(){
-      hero.style.backgroundImage = "linear-gradient(180deg, rgba(1,34,68,0.5), rgba(8,37,58,0.5)), url('/assets/img/hero-large.webp')";
-      hero.style.backgroundSize = 'cover';
-      hero.style.backgroundPosition = 'center';
+      // If you want to set as background for hero section, uncomment below:
+      // document.querySelector('.hero').style.backgroundImage = "url('/assets/img/hero-large.webp')";
+      // document.querySelector('.hero').style.backgroundSize = 'cover';
+      // document.querySelector('.hero').style.backgroundPosition = 'center';
     };
   })();
 
@@ -298,8 +556,7 @@
     var form = document.getElementById('contactForm');
     if(!form) return;
     form.addEventListener('submit', function(){
-      // optionally show a spinner or disable button
-      // leave as-is; Formspree will handle redirect or success
+      // Optional: disable button or show inline spinner
     });
   })();
   </script>
