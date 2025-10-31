@@ -145,11 +145,12 @@
       background:var(--accent);
     color:#000;padding:10px 14px;border-radius:10px;font-weight:700}
 
-  .instagram-icon, .linkedin-icon, .whatsapp-icon, email-icon, phone-icon {
-    background: none;
-    padding: 0;
-    border: none;
+  .instagram-icon, .linkedin-icon, .whatsapp-icon, .email-icon, {
     font-size: 20px;
+  }
+
+  instagram-icon, .whatsapp-icon, .email-icon {
+    font-weight: bold;
   }
     
   /* ---------- Hero (3D animated) ---------- */
@@ -241,19 +242,29 @@
   /* Fixed action buttons (Call + WhatsApp) */
   .fab-wrap{position:fixed;bottom:18px;right:18px;display:flex;flex-direction:column;gap:10px;z-index:40}
   .fixbtn{
-    display:flex;
-    align-items:center;
-    gap:10px;background:#000;
-    color:#fff;
-    padding:12px 14px;
-    border-radius:12px;
-    box-shadow:0 12px 30px rgba(0,0,0,0.2);
-    border:1px solid #000;
-    transition:transform .2s ease, box-shadow .2s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #000;
+    color: #fff;
+    padding: 12px 12px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    border: 1px solid #000;
+    transition: transform .2s ease, box-shadow .2s ease;
   }
-  .fixbtn .dot{width:10px;height:10px;border-radius:50%;background:var(--accent)}
-  .fixbtn:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(0,0,0,0.28)}
-  .fixbtn.whatsapp{background:var(--accent);color:#000;border-color:var(--accent)}
+  .fixbtn:hover {
+      transform: translateY(-2px); 
+    box-shadow: 0 18px 36px rgba(0,0,0,0.28)
+  }
+  .fixbtn.whatsapp {
+    background: var(--accent);
+    color:#000; 
+    border-color:var(--accent)
+  }
+  .fixbtn .whatsapp-icon {
+    font-sizr: 30px;
+  }
 
   /* Accessibility helpers */
   .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
@@ -551,13 +562,11 @@
   <!-- Fixed action buttons -->
   <div class="fab-wrap" aria-label="Quick contact">
     <a class="fixbtn" href="tel:+919424084564" aria-label="Call SSCL">
-      <span class="dot" aria-hidden="true"></span>
       <span>
         <i class="fa fa-phone phone-icon"></i>
       </span>
     </a>
     <a class="fixbtn whatsapp" href="https://wa.me/+919424084564" target="_blank" rel="noopener" aria-label="WhatsApp SSCL">
-      <span class="dot" aria-hidden="true"></span>
       <span>
         <i class="fab fa-whatsapp whatsapp-icon"></i>
       </span>
