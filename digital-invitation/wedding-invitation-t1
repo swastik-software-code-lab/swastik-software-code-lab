@@ -1,1 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wedding Invitation - Aarav & Meera</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --card-bg: #ffffff;
+      --border-color: #e5e5e5;
+      --soft-gray: #f7f7f7;
+      --text-color: #222222;
+      --muted-text: #666666;
+      --accent-color: #e79cb3;   /* invite accent */
+      --accent-soft: #fce8ef;
+      --error-color: #d9534f;
+      --success-color: #2e7d32;
+      --shadow-soft: 0 12px 30px rgba(15, 23, 42, 0.08);
+      --radius-card: 16px;
+      --radius-pill: 999px;
+      --transition-fast: 0.18s ease;
+
+      /* Brand / logo colors */
+      --brand-orange: #ff7a1a;
+      --brand-black: #111111;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #fdf2f7 0, #ffffff 40%);
+      color: var(--text-color);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px 12px 32px;
+    }
+
+    /* 0. BRAND BAR */
+    .brand-bar {
+      width: 100%;
+      max-width: 640px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      margin-bottom: 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 122, 26, 0.45);
+      background: #ffffff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .brand-logo {
+      width: 26px;
+      height: 26px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 600;
+      background: var(--brand-orange);
+      color: #ffffff;
+      flex-shrink: 0;
+    }
+
+    .brand-name {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand-black);
+    }
+
+    .brand-sub {
+      display: block;
+      font-size: 11px;
+      text-transform: none;
+      letter-spacing: 0.02em;
+      color: var(--muted-text);
+      font-weight: 400;
+    }
+
+    .main-card {
+      width: 100%;
+      max-width: 640px;
+      background: var(--card-bg);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-soft);
+      padding: 20px 18px 24px;
+    }
+
+    @media (min-width: 480px) {
+      .main-card {
+        padding: 26px 28px 30px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .page-wrapper {
+        padding-top: 40px;
+      }
+      .main-card {
+        padding: 32px 38px 34px;
+        border-radius: 22px;
+      }
+    }
+
+    /* GANESH JI IMAGE PLACEHOLDER */
+    .ganesh-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 12px;
+      margin-top: 4px;
+    }
+
+    .ganesh-img {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(231, 156, 179, 0.9);
+      box-shadow: 0 10px 26px rgba(148, 163, 184, 0.4);
+      background: #fff;
+    }
+
+    header.hero {
+      text-align: center;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .hero-tagline {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(231, 156, 179, 0.4);
+      background: #fff7fa;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted-text);
+      margin-bottom: 10px;
+    }
+
+    .hero-tagline-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 999px;
+      background: var(--accent-color);
+    }
+
+    .hero-names {
+      font-size: 26px;
+      line-height: 1.1;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #222222;
+    }
+
+    @media (min-width: 480px) {
+      .hero-names {
+        font-size: 30px;
+        letter-spacing: 0.16em;
+      }
+    }
+
+    .hero-and {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--muted-text);
+      font-weight: 400;
+      margin: 4px 0;
+    }
+
+    .hero-subtitle {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      color: var(--muted-text);
+      margin-top: 6px;
+      margin-bottom: 12px;
+    }
+
+    .hero-date {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .hero-time {
+      font-size: 13px;
+      color: var(--muted-text);
+    }
+
+    main {
+      margin-top: 18px;
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: 480px) {
+      section {
+        margin-bottom: 24px;
+      }
+    }
+
+    .section-heading {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted-text);
+      margin-bottom: 10px;
+    }
+
+    .section-body {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-color);
+    }
+
+    /* VENUE */
+    .venue-card {
+      border-radius: 14px;
+      border: 1px solid var(--border-color);
+      background: var(--soft-gray);
+      padding: 10px 12px 12px;
+    }
+
+    @media (min-width: 480px) {
+      .venue-card {
+        padding: 14px 16px 16px;
+      }
+    }
+
+    .venue-name {
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .venue-address {
+      font-size: 13px;
+      color: var(--muted-text);
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-pill);
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 500;
+      border: 1px solid var(--accent-color);
+      background: #ffffff;
+      color: var(--accent-color);
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color var(--transition-fast),
+        color var(--transition-fast), transform var(--transition-fast),
+        box-shadow var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      background: var(--accent-color);
+      color: #ffffff;
+      box-shadow: 0 8px 18px rgba(231, 156, 179, 0.32);
+      transform: translateY(-1px);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+    }
+
+    .btn-secondary {
+      border-color: var(--border-color);
+      color: var(--muted-text);
+      background: #ffffff;
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary:focus-visible {
+      border-color: var(--accent-color);
+      color: var(--accent-color);
+      box-shadow: 0 8px 18px rgba(148, 163, 184, 0.22);
+    }
+
+    /* EVENTS */
+    .events-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .event-item {
+      border-radius: 14px;
+      border: 1px solid var(--border-color);
+      background: #ffffff;
+      padding: 10px 12px;
+    }
+
+    @media (min-width: 480px) {
+      .event-item {
+        padding: 12px 14px;
+      }
+    }
+
+    .event-name {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .event-datetime {
+      font-size: 13px;
+      color: var(--muted-text);
+      margin-bottom: 2px;
+    }
+
+    .event-location {
+      font-size: 12px;
+      color: var(--muted-text);
+    }
+
+    /* RSVP */
+    #rsvp-section {
+      border-radius: 16px;
+      border: 1px dashed rgba(231, 156, 179, 0.9);
+      background: #fff7fa;
+      padding: 14px 12px 16px;
+    }
+
+    @media (min-width: 480px) {
+      #rsvp-section {
+        padding: 16px 16px 18px;
+      }
+    }
+
+    .rsvp-note {
+      font-size: 12px;
+      color: var(--muted-text);
+      margin-bottom: 12px;
+      border-left: 2px solid rgba(231, 156, 179, 0.6);
+      padding-left: 8px;
+    }
+
+    .form-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .form-label {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--muted-text);
+    }
+
+    .input,
+    select {
+      padding: 8px 10px;
+      border-radius: 9px;
+      border: 1px solid var(--border-color);
+      background: #ffffff;
+      font-family: inherit;
+      font-size: 13px;
+      outline: none;
+      transition: border-color var(--transition-fast),
+        box-shadow var(--transition-fast), background-color var(--transition-fast);
+    }
+
+    .input:focus,
+    select:focus {
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 1px rgba(231, 156, 179, 0.3);
+      background: #fffdfd;
+    }
+
+    .input::placeholder {
+      color: #b0b0b0;
+    }
+
+    .rsvp-button-row {
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 6px;
+    }
+
+    .message {
+      margin-top: 8px;
+      font-size: 12px;
+      min-height: 16px;
+    }
+
+    .message--success {
+      color: var(--success-color);
+    }
+
+    .message--error {
+      color: var(--error-color);
+    }
+
+    /* WhatsApp Share */
+    .share-section {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      align-items: flex-start;
+    }
+
+    .share-hint {
+      font-size: 12px;
+      color: var(--muted-text);
+    }
+
+    /* Optional Photo / Initials */
+    .photo-section {
+      display: flex;
+      justify-content: center;
+      margin-top: 6px;
+    }
+
+    .photo-placeholder {
+      width: 92px;
+      height: 92px;
+      border-radius: 999px;
+      border: 1px solid var(--border-color);
+      background: radial-gradient(circle at 25% 0, #ffe5f0 0, #ffffff 40%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent-color);
+      box-shadow: 0 8px 22px rgba(148, 163, 184, 0.25);
+    }
+
+    /* Business / Lead Capture */
+    .business-section {
+      margin-top: 6px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .business-heading {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted-text);
+      margin-bottom: 6px;
+    }
+
+    .business-text {
+      font-size: 13px;
+      margin-bottom: 8px;
+      color: var(--muted-text);
+    }
+
+    .business-list {
+      list-style: none;
+      font-size: 12px;
+      color: var(--muted-text);
+    }
+
+    .business-list li {
+      margin-bottom: 2px;
+    }
+
+    .business-label {
+      font-weight: 500;
+    }
+
+    .business-link {
+      text-decoration: none;
+      color: inherit;
+      border-bottom: 1px dotted rgba(148, 163, 184, 0.7);
+    }
+
+    .business-link:hover {
+      color: var(--accent-color);
+      border-bottom-color: var(--accent-color);
+    }
+
+    footer.site-footer {
+      width: 100%;
+      max-width: 640px;
+      text-align: center;
+      font-size: 11px;
+      color: var(--muted-text);
+      margin-top: 16px;
+      padding-top: 10px;
+      border-top: 1px dashed rgba(148, 163, 184, 0.5);
+    }
+
+    .footer-line {
+      margin-bottom: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <!-- BRAND BAR: Edit logo initials and brand name here -->
+    <div class="brand-bar">
+      <div class="brand-logo">
+        <img src="Swastik Software Code Lab logo.jpg" alt="SSCL logo"> <!-- add company home page link here -->
+      </div>
+      <div class="brand-name">
+        <!-- Edit brand / studio name here -->
+        Swastik Software Code Lab - SSCL · Digital Invitations
+        <span class="brand-sub"> The Software of your thoghts. </span>
+      </div>
+    </div>
+
+    <div class="main-card">
+      <!-- GANESH JI IMAGE (TOP CENTER) -->
+      <!-- Replace src with your own Ganesh Ji image path or URL -->
+      <div class="ganesh-wrapper">
+        <img
+          src="ganesh-placeholder.jpg"
+          alt="Ganesh Ji"
+          class="ganesh-img"
+        />
+      </div>
+
+      <!-- 1. HERO SECTION -->
+      <header class="hero">
+        <div class="hero-tagline">
+          <span class="hero-tagline-dot"></span>
+          Together with their families
+        </div>
+
+        <!-- Edit couple names here -->
+        <h1 class="hero-names">Aarav</h1>
+        <div class="hero-and">and</div>
+        <h1 class="hero-names">Meera</h1>
+
+        <p class="hero-subtitle">Wedding Invitation</p>
+
+        <!-- Edit date and time here -->
+        <p class="hero-date">Sunday, 23 March 2025</p>
+        <p class="hero-time">Ceremony at 6:00 PM · Reception to follow</p>
+      </header>
+
+      <main>
+        <!-- 2. VENUE SECTION -->
+        <section id="venue">
+          <h2 class="section-heading">Venue</h2>
+          <div class="venue-card">
+            <div class="section-body">
+              <!-- Edit venue name and address here -->
+              <p class="venue-name">The Grand Orchid Banquet</p>
+              <p class="venue-address">
+                123 Celebration Avenue, Near City Park,<br />
+                Mumbai, Maharashtra 400001, India
+              </p>
+            </div>
+            <a
+              href="#"
+              class="btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open in Google Maps
+            </a>
+            <!-- Replace href="#" above with your actual Google Maps link -->
+          </div>
+        </section>
+
+        <!-- 3. EVENTS SECTION -->
+        <section id="events">
+          <h2 class="section-heading">Events</h2>
+          <div class="events-list">
+            <!-- Edit or duplicate these event cards as needed -->
+            <article class="event-item">
+              <h3 class="event-name">Haldi Ceremony</h3>
+              <p class="event-datetime">Saturday, 22 March 2025 · 10:00 AM</p>
+              <p class="event-location">Family Residence · Mumbai</p>
+            </article>
+
+            <article class="event-item">
+              <h3 class="event-name">Wedding Ceremony</h3>
+              <p class="event-datetime">Sunday, 23 March 2025 · 6:00 PM</p>
+              <p class="event-location">The Grand Orchid Banquet · Mumbai</p>
+            </article>
+
+            <article class="event-item">
+              <h3 class="event-name">Reception</h3>
+              <p class="event-datetime">Sunday, 23 March 2025 · 8:00 PM</p>
+              <p class="event-location">The Grand Orchid Banquet · Mumbai</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- 4. OPTIONAL RSVP SECTION -->
+        <!-- Delete this entire section if RSVP is not needed -->
+        <section id="rsvp-section">
+          <h2 class="section-heading">RSVP</h2>
+          <p class="rsvp-note">
+            Kindly let us know your presence to help us plan better.
+          </p>
+
+          <form id="rsvp-form" novalidate>
+            <div class="form-grid">
+              <div class="form-field">
+                <label class="form-label" for="fullName">Full Name</label>
+                <!-- Edit placeholder text if needed -->
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  class="input"
+                  placeholder="Enter your full name"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="contact">
+                  Contact (Email or Phone)
+                </label>
+                <input
+                  type="text"
+                  id="contact"
+                  name="contact"
+                  class="input"
+                  placeholder="you@example.com / +91-XXXXXXXXXX"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="attending">
+                  Are you attending?
+                </label>
+                <select id="attending" name="attending" required>
+                  <option value="">Select an option</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="guests">
+                  Number of guests (including you)
+                </label>
+                <input
+                  type="number"
+                  id="guests"
+                  name="guests"
+                  class="input"
+                  min="1"
+                  max="10"
+                  placeholder="e.g. 2"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="rsvp-button-row">
+              <button type="submit" class="btn">
+                Submit RSVP
+              </button>
+            </div>
+          </form>
+
+          <!-- RSVP status messages appear here -->
+          <div id="rsvp-message" class="message" aria-live="polite"></div>
+        </section>
+
+        <!-- 5. WHATSAPP SHARE SECTION -->
+        <section id="whatsapp-share">
+          <h2 class="section-heading">Share</h2>
+          <div class="share-section">
+            <button id="whatsapp-share-btn" type="button" class="btn-secondary btn">
+              Share on WhatsApp
+            </button>
+            <p class="share-hint">
+              Share this invite with friends and family directly on WhatsApp.
+            </p>
+          </div>
+        </section>
+
+        <!-- 6. OPTIONAL PHOTO / INITIALS SECTION -->
+        <!-- 
+          To use a real couple photo, replace the .photo-placeholder <div> below 
+          with an <img> tag, for example:
+          <img src="path-to-couple-photo.jpg" alt="Aarav and Meera" class="photo-placeholder" />
+          Or comment out / remove this entire section if not needed.
+        -->
+        <section id="photo-section" class="photo-section">
+          <div class="photo-placeholder">
+            A &amp; M
+          </div>
+        </section>
+
+        <!-- 7. BUSINESS CONTACT / LEAD CAPTURE SECTION -->
+        <section id="business-section" class="business-section">
+          <h2 class="business-heading">Work with us</h2>
+          <p class="business-text">
+            Like this digital invitation? Contact us to create a custom one for you.
+          </p>
+          <ul class="business-list">
+            <!-- Replace the placeholder contact details below with your own -->
+            <li>
+              <span class="business-label">Email:</span>
+              <!-- Put your real email in href and text -->
+              <a href="mailto:yourname@example.com" class="business-link">
+                yourname@example.com
+              </a>
+            </li>
+            <li>
+              <span class="business-label">Instagram:</span>
+              <!-- Replace with your real Instagram handle -->
+              <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer" class="business-link">
+                @yourhandle
+              </a>
+            </li>
+            <li>
+              <span class="business-label">LinkedIn:</span>
+              <!-- Replace with your real LinkedIn profile URL -->
+              <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="business-link">
+                linkedin.com/in/yourprofile
+              </a>
+            </li>
+            <li>
+              <span class="business-label">WhatsApp:</span>
+              <!-- Replace with your WhatsApp link or number -->
+              <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer" class="business-link">
+                +91-12345-67890
+              </a>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <!-- 8. FOOTER WATERMARK (Do not remove or hide this watermark) -->
+    <footer class="site-footer">
+      <div class="footer-line">
+        Copyright © 2025 Swastik Software Code Lab - SSCL · Digital Invitation
+      </div>
+      <div class="footer-line">
+        Part of Swastik Empire
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // RSVP FORM HANDLING
+    (function () {
+      const form = document.getElementById("rsvp-form");
+      const messageEl = document.getElementById("rsvp-message");
+
+      if (!form || !messageEl) return;
+
+      // Replace YOUR_SCRIPT_ID with your actual Google Apps Script deployment ID
+      const SCRIPT_URL =
+        "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec";
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        messageEl.textContent = "";
+        messageEl.className = "message";
+
+        const formData = new FormData(form);
+
+        if (!formData.get("fullName") || !formData.get("contact")) {
+          messageEl.textContent =
+            "Please fill in your name and contact details.";
+          messageEl.classList.add("message--error");
+          return;
+        }
+
+        if (!formData.get("attending")) {
+          messageEl.textContent = "Please select if you are attending.";
+          messageEl.classList.add("message--error");
+          return;
+        }
+
+        const guests = formData.get("guests");
+        if (!guests || Number(guests) <= 0) {
+          messageEl.textContent = "Please enter a valid number of guests.";
+          messageEl.classList.add("message--error");
+          return;
+        }
+
+        messageEl.textContent = "Submitting your response...";
+        messageEl.classList.add("message--success");
+
+        fetch(SCRIPT_URL, {
+          method: "POST",
+          body: formData,
+        })
+          .then(function (response) {
+            if (!response.ok) {
+              throw new Error("Network response was not ok.");
+            }
+            return response.text();
+          })
+          .then(function () {
+            form.reset();
+            messageEl.textContent =
+              "Thank you, your details have been noted.";
+            messageEl.className = "message message--success";
+          })
+          .catch(function () {
+            messageEl.textContent =
+              "Sorry, something went wrong. Please try again later.";
+            messageEl.className = "message message--error";
+          });
+      });
+    })();
+
+    // WHATSAPP SHARE BUTTON
+    (function () {
+      const shareBtn = document.getElementById("whatsapp-share-btn");
+      if (!shareBtn) return;
+
+      shareBtn.addEventListener("click", function () {
+        const customMessage =
+          "You are warmly invited to Aarav & Meera's wedding. Tap to view the invitation:";
+        const shareUrl =
+          "https://wa.me/?text=" +
+          encodeURIComponent(customMessage + " " + window.location.href);
+
+        window.open(shareUrl, "_blank", "noopener,noreferrer");
+      });
+    })();
+  </script>
+</body>
+</html>
